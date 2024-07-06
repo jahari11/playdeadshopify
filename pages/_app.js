@@ -37,7 +37,7 @@ export default function App({ Component, pageProps }) {
   const router = useRouter();
   return <main className={`${inter.className}`}>
     <CartProvider>
-    <Navbar />
+    
     <AnimatePresence mode="wait">
       <motion.div
       key={router.pathname}
@@ -45,6 +45,7 @@ export default function App({ Component, pageProps }) {
       animate="enter"
       exit="exit"
       variants={pageVariants}>
+        <Navbar />
       <Component {...pageProps}/>
       </motion.div>
     </AnimatePresence>

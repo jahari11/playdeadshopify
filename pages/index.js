@@ -5,7 +5,7 @@ export default function Home() {
     <>
       <div className="mx-auto min-h-screen relative flex flex-col">
         <div className="flex-grow">
-          <h1 className="text-center text-green-600 text-[70px] uppercase font-bold mb-8">playdead Worldwide</h1>
+          <h1 className="text-center text-green-600 text-[50px] uppercase font-bold mb-8">playdead Worldwide</h1>
           <Link href="/products">
           <div className="flex gap-2 justify-center">
             
