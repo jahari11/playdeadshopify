@@ -1,5 +1,7 @@
 import { createContext, useContext, useState, useEffect } from 'react';
-import { addProductToCart, getCart, createCheckout, storeCart } from '../libs/Cart.js';
+import { addProductToCart, getCart, createCheckout, storeCart, updateProductQuantity, removeProductFromCart } from '../libs/Cart.js';
+import toast from 'react-hot-toast';
+
 
 const CartContext = createContext();
 
@@ -23,11 +25,21 @@ export const CartProvider = ({ children }) => {
   };
 
   const updateCartQuantity = async (lineItemId, quantity) => {
-    // Update quantity logic
+    if (quantity <= 0) {
+      await removeFromCart(lineItemId);
+
+    } else {
+      await updateProductQuantity(lineItemId, quantity);
+      const updatedCart = await getCart();
+      setCart(updatedCart);
+    }
   };
 
   const removeFromCart = async (lineItemId) => {
-    // Remove item logic
+    await removeProductFromCart(lineItemId);
+    const updatedCart = await getCart();
+    setCart(updatedCart);
+    toast.error('Product removed')
   };
 
   return (

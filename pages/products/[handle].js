@@ -1,6 +1,7 @@
 import { client } from "@/libs/shopify";
 import { useState } from 'react';
 import { useCart } from "@/libs/CartContext";
+import toast from "react-hot-toast";
 
 export default function ProductPage({ product }) {
   const { addToCart } = useCart();
@@ -17,7 +18,7 @@ export default function ProductPage({ product }) {
       variantId: selectedVariant.id,
       quantity,
     });
-    alert(`Added ${quantity} of ${selectedVariant.title} to the cart.`);
+    toast.success(`Added ${quantity} ${selectedVariant.title} to the cart.`);
   };
 
   const handleIncreaseQuantity = () => {

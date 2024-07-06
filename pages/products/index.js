@@ -6,8 +6,7 @@ export default function Shop({ products }) {
   return (
     <>
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-        <h2 className="sr-only">Products</h2>
-
+        <h2 className=" text-center text-white uppercase mb-8 text-5xl">Products</h2>
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
           {products.map((product) => (
             <Link key={product.id} href={`/products/${product.handle}`} className="group">
@@ -18,7 +17,7 @@ export default function Shop({ products }) {
                   className="h-full w-full object-cover object-center group-hover:opacity-75"
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100">
-                  <span className="text-white text-lg">See more</span>
+                  <span className="text-green-600 uppercase text-lg">See more</span>
                 </div>
               </div>
               <h3 className="mt-4 text-md text-green-600 uppercase">{product.title}</h3>
