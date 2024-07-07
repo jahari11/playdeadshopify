@@ -4,12 +4,14 @@ export default function CartPage() {
     const {cart, updateCartQty, removeFromCart} = useCart();
 
     if (!cart.lineItems || cart.lineItems.length === 0) {
-        return <p className="text-white text-center">Your cart is empty, please shop!</p>;
+        return <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+          <p className="text-white text-center">Your cart is empty, please shop!</p>
+        </div>;
     }
 
     const totalPrice = cart.totalPriceV2.amount;
     return (
-    <div className="px-8">
+    <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
     <h2 className="text-white text-center text-xl underline font-bold">Your Cart</h2>
       <ul>
         {cart.lineItems.map(item => (

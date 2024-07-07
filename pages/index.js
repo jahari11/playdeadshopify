@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <>
-      <div className="mx-auto min-h-screen relative flex flex-col">
+    <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+      <div className="mx-auto relative flex flex-col">
         <div className="flex-grow">
           <h1 className="text-center text-green-600 text-[50px] uppercase font-bold mb-8">playdead Worldwide</h1>
           <Link href="/products">
@@ -27,10 +27,10 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      <div className="w-full flex justify-center items-center absolute bottom-0">
+      <div className="flex justify-center mt-[13rem]">
         <span className="text-green-600 uppercase md:text-6xl">playdeadglobal.com</span>
       </div>
-    </>
+    </div>
   );
 }
 
