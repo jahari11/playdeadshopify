@@ -1,7 +1,10 @@
+import Navbar from "@/Components/Navbar";
 import Link from "next/link";
 
 export default function Home() {
   return (
+<>
+<Navbar />
     <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
       <div className="mx-auto relative flex flex-col">
         <div className="flex-grow">
@@ -31,6 +34,7 @@ export default function Home() {
         <span className="text-green-600 uppercase md:text-6xl">playdeadglobal.com</span>
       </div>
     </div>
+    </>
   );
 }
 

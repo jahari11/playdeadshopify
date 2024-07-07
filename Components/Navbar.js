@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { Transition } from '@headlessui/react';
 import Link from 'next/link';
+import tailwindConfig from '@/tailwind.config';
 
-const NavMenu = () => {
+
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuIcon = (
@@ -85,7 +87,7 @@ const NavMenu = () => {
   );
 };
 
-export default NavMenu;
+export default Navbar;
 
 
 
