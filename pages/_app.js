@@ -1,5 +1,5 @@
 import "@/styles/globals.css";
-import Navbar from "@/Components/Navbar";
+import Header from "@/Components/Header";
 import { CartProvider } from "@/libs/CartContext";
 import { Toaster } from "react-hot-toast";
 import { useRouter } from "next/router";
@@ -44,7 +44,7 @@ export default function App({ Component, pageProps }) {
             exit="exit"
             variants={pageVariants}
           >
-            <Navbar />
+            <Header />
             <Component {...pageProps} />
           </motion.div>
         </AnimatePresence>
