@@ -1,7 +1,18 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
-    }
-  }
+      "@/*": ["./*"],
+      "@/components/*": ["components/*"],
+      "@/libs/*": ["libs/*"],
+      "@/styles/*": ["styles/*"],
+      "@/pages/*": ["pages/*"]
+    },
+    "jsx": "preserve", // Specify JSX code generation
+    "allowJs": true, // Allow JavaScript files to be compiled
+    "moduleResolution": "node", // Use Node.js module resolution strategy
+    "noEmit": true // Do not emit compiled files
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
+  "exclude": ["node_modules"]
 }
