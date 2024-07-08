@@ -5,3 +5,11 @@
 body {
     background: black;
 }
+
+
+#home-bg {
+    background-image: url('../assets/pdbg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

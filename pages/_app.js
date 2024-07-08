@@ -5,6 +5,7 @@ import { Toaster } from "react-hot-toast";
 import { useRouter } from "next/router";
 import { Oswald } from "next/font/google";
 import { AnimatePresence, motion } from "framer-motion";
+import Head from "next/head";
 
 const oswald = Oswald({ subsets: ["latin"], weight: '400' });
 
@@ -33,7 +34,11 @@ const pageVariants = {
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
-  return (
+  return (<>
+    <Head>
+      <title>PLAYDEADGLOBAL</title>
+      <link rel="icon" href="../assets/pdlogo.png" />
+    </Head>
     <main className={`${oswald.className}`}>
       <CartProvider>
         <AnimatePresence mode="wait">
@@ -51,6 +56,7 @@ export default function App({ Component, pageProps }) {
         <Toaster />
       </CartProvider>
     </main>
+    </>
   );
 }
 

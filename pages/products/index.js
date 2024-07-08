@@ -1,6 +1,8 @@
 
 import { client } from "@/libs/shopify";
 import Link from "next/link";
+import Image from "next/image";
+import logo from '@/assets/pdlogo.png'
 
 export default function Shop({ products }) {
   return (
@@ -17,7 +19,7 @@ export default function Shop({ products }) {
                   className="h-full w-full object-cover object-center group-hover:opacity-75"
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100">
-                  <span className="text-green-600 uppercase text-lg">See more</span>
+                  <Image src={logo} width={300} height={300} />
                 </div>
               </div>
               <h3 className="mt-4 text-md text-green-600 uppercase">{product.title}</h3>
